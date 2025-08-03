@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Hero() {
     return (
         <section className="bg-white py-24 sm:py-32" id="home">
