@@ -1,6 +1,5 @@
-# wrangler.toml
 name = "bugcodestudio"
 compatibility_date = "2025-08-03"
 
 [build]
-command = "npx @cloudflare/next-on-pages"
+command = "npm run pages:build"
