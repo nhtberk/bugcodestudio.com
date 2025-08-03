@@ -1,5 +1,4 @@
 'use client'
-
 import { useState } from 'react'
 import {
   Dialog,
@@ -12,6 +11,7 @@ import {
 } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import Logo2 from '@/public/logo2.jpg';
+import Link from 'next/link'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -20,13 +20,13 @@ export default function Header() {
     <header className="bg-white shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
             <Image
               src={Logo2}
               alt="Logo"
               className="h-8 w-auto"
             />
-          </a>
+          </Link>
         </div>
 
         <div className="flex lg:hidden">
@@ -41,10 +41,10 @@ export default function Header() {
         </div>
 
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="/" className="text-sm font-semibold leading-6 text-gray-900">Home</a>
-          <a href="#apps" className="text-sm font-semibold leading-6 text-gray-900">Apps</a>
-          <a href="#about" className="text-sm font-semibold leading-6 text-gray-900">About</a>
-          <a href="#contact" className="text-sm font-semibold leading-6 text-gray-900">Contact</a>
+          <Link href="/" className="text-sm font-semibold leading-6 text-gray-900">Home</Link>
+          <Link href="#apps" className="text-sm font-semibold leading-6 text-gray-900">Apps</Link>
+          <Link href="#about" className="text-sm font-semibold leading-6 text-gray-900">About</Link>
+          <Link href="#contact" className="text-sm font-semibold leading-6 text-gray-900">Contact</Link>
         </PopoverGroup>
       </nav>
 
@@ -52,14 +52,14 @@ export default function Header() {
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full sm:max-w-sm bg-white p-6 overflow-y-auto">
           <div className="flex items-center justify-between">
-            <a href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
+            <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
               <Image
               src={Logo2}
               alt="Logo"
               className="h-8 w-auto"
             />
               
-            </a>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -72,10 +72,10 @@ export default function Header() {
 
           <div className="mt-6">
             <div className="space-y-4">
-              <a href="/" className="block text-base font-semibold text-gray-900 hover:bg-gray-50 rounded-lg px-3 py-2">Home</a>
-              <a href="#apps" className="block text-base font-semibold text-gray-900 hover:bg-gray-50 rounded-lg px-3 py-2">Apps</a>
-              <a href="#about" className="block text-base font-semibold text-gray-900 hover:bg-gray-50 rounded-lg px-3 py-2">About</a>
-              <a href="#contact" className="block text-base font-semibold text-gray-900 hover:bg-gray-50 rounded-lg px-3 py-2">Contact</a>
+              <Link href="/" className="block text-base font-semibold text-gray-900 hover:bg-gray-50 rounded-lg px-3 py-2">Home</Link>
+              <Link href="#apps" className="block text-base font-semibold text-gray-900 hover:bg-gray-50 rounded-lg px-3 py-2">Apps</Link>
+              <Link href="#about" className="block text-base font-semibold text-gray-900 hover:bg-gray-50 rounded-lg px-3 py-2">About</Link>
+              <Link href="#contact" className="block text-base font-semibold text-gray-900 hover:bg-gray-50 rounded-lg px-3 py-2">Contact</Link>
             </div>
           </div>
         </DialogPanel>
