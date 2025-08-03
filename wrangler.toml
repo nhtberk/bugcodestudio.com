@@ -1,5 +1,0 @@
-name = "bugcodestudio"
-compatibility_date = "2025-08-03"
-
-[build]
-command = "npm run build"
